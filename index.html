@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jerome Minney - Technologist | Entrepreneur | Educator </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <!-- <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#help">Help</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">HI, I'M JEROME </h1>
+                <hr>
+                <p>I enjoy creating value</p>
+                <p style="font-size:0.8em;">Press [spacebar to continue..] JM to code this story</p>
+                <!-- When user presses spacebar, trigger "animate" event, which will:
+                 - this = array of spans that constitute my story
+                 - this.newspan = this[i+1]
+                 - this.currentspan = this[i]
+                 - Translate the this.currentspan down by 100px, fading opacity from 1 to 0 (linearly?)
+                 - Load the this.newspan at the same location as the old this.currentspan, with "opacity: 0"
+                 - After the this.currentspan has moved down by the current line-height, fade in this.newspan
+                 - i++
+                 - I think the spans need an absolute positioning? -->
+
+
+
+
+                <!-- <a href="#help" class="btn btn-primary btn-xl page-scroll">Find Out More</a> -->
+            </div>
+        </div>
+    </header>
+
+<style>
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.header-content {
+  width: 70% !important; /*CLEAN THIS UP JEROME*/
+}
+
+.header-content, header .header-content .header-content-inner p {
+  color: rgba(0,0,0,0.7) !important;
+}
+
+.skillpilln {
+  border-bottom:2px solid white;
+  border-radius: 10px;
+  padding:0px 7px;
+  margin: 10px 5px;
+  display: inline-block;
+}
+
+.skillpill {
+  font-weight: 600 ;
+  color: black;
+}
+
+.skillpillo {
+  padding:0px 7px;
+  margin: 3px 5px;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.text-faded {
+  color: rgba(0,0,0,0.7);
+}
+
+#help p, #services p {
+  line-height: 2em;
+  margin: 40px auto;
+}
+
+.btn-default {
+  background-color: #ddd;
+}
+.btn-default:hover {
+  background-color: #F05F40 !important;
+  color:white !important;
+}
+.btn-default:focus{
+  outline: none;
+}
+
+</style>
+<style>
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 50vh;
+}
+
+.item {
+  padding-top:80px;
+}
+
+.testimonials {
+  padding-top: 50px;
+}
+
+/*.item:nth-child(1) {
+  background: #74C390;
+}
+.item:nth-child(2) {
+  background: #51BCE8;
+}
+.item:nth-child(3) {
+  background: #E46653;
+}*/
+
+.carousel-control {
+  background: none !important;
+}
+
+</style>
+
+
+    <section id="help">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="section-heading">Can I help you?</h2>
+                    <hr class="spacey">
+                    <p class="text-faded">Arrange a 15 minute skype and get connected directly</p>
+                    <a href="https://calendly.com/jeromeminney/15min" tabindex="-1" target="_blank" class="page-scroll btn btn-default btn-xl sr-button">
+                      View Availability
+                    </a>
+
+                    <!-- <p> <span class="text-faded">I could share my experience with:</span>
+                       <span class="skillpill">Product Management</span>,
+                       <span class="skillpill">Marketing</span>,
+                       <span class="skillpill">Brand Positioning</span>,
+                       <span class="skillpill">Introductions</span>, and any soft skills around entrepreneurship.</p> -->
+                    <p class="text-faded"><span>Ask me for advice on:</span>
+                       <span class="skillpill">starting technology companies</span>, and
+                       <span class="skillpill">getting them ready for growth</span>,
+                    </p>
+                    <!-- <p> <span class="text-faded">You might want to book me for:</span> -->
+                    <p class="text-faded"> <span>Book me for:</span>
+                      <span class="skillpill">web development</span>,
+                      <span class="skillpill">speaking engagements</span>,
+                      <span class="skillpill">business consultancy</span>,
+                      or <br/>kickstarting a new initiative at your company</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="services">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="section-heading">My recent experience</h2>
+                    <hr class="light primary">
+
+                    <p>Having Co-founded two software agencies - Mika Labs and Glass Creative - I have had 3 years of experience with most roles at a Digital Agency, from Biz Dev to Positioning, Consultancy, Workshops, Product Management, Web Development, Employment, Accounting, and Legal.</p>
+                    <p>Further, I Co-founded a funded tech startup, where I had responsibility for Product Management (mobile apps), Sales (to Restaurants), and Marketing/Positioning for the first year.</p>
+                    <p>By being an active listener, but also an educator for our potential clients, I was able to quickly build rapport within the network and generated all of Glass Creative’s leads except one, turning over more than £250k in the first year of trading with no previous brand, reputation, or portfolio.</p>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+<!-- SECTION TAG MISSING BECAUSE IT BREAKS THE BG COLOR - FIX THIS -->
+        <!-- <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="active item">
+                <div class="col-md-2 col-md-offset-2">
+                  <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                </div>
+                <div class="testimonials col-md-6">
+                  <p>1 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><small> - YAYO DUDEMOUS</small></p>
+                </div>
+              </div>
+                <div class="item">
+                  <div class="col-md-2 col-md-offset-2">
+                    <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                  </div>
+                  <div class="testimonials col-md-6">
+                    <p>2 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><small> - YAYO DUDEMOUS</small></p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-2 col-md-offset-2">
+                    <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                  </div>
+                  <div class="testimonials col-md-6">
+                    <p>3 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><small> - YAYO DUDEMOUS</small></p>
+                  </div>
+                </div>
+            </div>
+            
+            <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
+            <a class="carousel-control right" href="#carousel" data-slide="next"></a>
+        </div> -->
+
+
+
+
+    <!-- <section id="testimonials">
+      <div class="container" id="testimonials-row">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
+                <h2 class="section-heading">What others say</h2>
+                <hr class="primary">
+                  <div class="carousel slide" id="testimonials-rotate">
+                      <ol class="carousel-indicators">
+                          <li class="active" data-slide-to="0" data-target="#testimonials-rotate">
+                          </li>
+                          <li data-slide-to="1" data-target="#testimonials-rotate">
+                          </li>
+                          <li data-slide-to="2" data-target="#testimonials-rotate">
+                          </li>
+                      </ol>
+                      <div class="carousel-inner">
+                          <div class="item active">
+                              <div class="col-md-2"><img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                              </div>
+                              <div class="testimonials col-md-10">
+
+                                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small> - YAYO DUDEMOUS</small>
+                                  </p>
+
+                              </div>
+
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="item">
+                              <div class="col-md-2"><img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                              </div>
+                              <div class="testimonials col-md-10">
+
+                                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small> - YAYO DUDEMOUS</small></p>
+
+                              </div>
+
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="item">
+                              <div class="col-md-2"><img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                              </div>
+                              <div class="testimonials col-md-10">
+
+                                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small> - YAYO DUDEMOUS</small></p>
+
+                              </div>
+
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="pull-right">
+                      <a class="left" href="#testimonials-rotate" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                      <a class="right" href="#testimonials-rotate" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
+          </p>
+      </div>
+      <!--end of container
+    </section> -->
+
+
+    <!-- THIS IS AN IMAGE GALLERY I CAN USE LATER
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Free Download at Start Bootstrap!</h2>
+                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+            </div>
+        </div>
+    </aside> -->
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>
