@@ -10,12 +10,11 @@
     <meta name="author" content="">
 
     <title>Jerome Minney - Technologist | Entrepreneur | Educator </title>
-    <link rel='shortcut icon' href='../jeromeminneyv0/img/favicon.ico' type='image/x-icon'/ >
+    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -32,32 +31,41 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top">
+
+  <!-- React Story Styles -->
+  <style>
+    .storyline {
+      display: inline-block;
+      transition: opacity 250ms linear 150ms;
+      opacity: 0;
+      font-size: 1.7em;
+    }
+    .storyline.fadedown {
+      transition: all 250ms linear;
+      transform: translateY(15px);
+      opacity: 0;
+    }
+    .storyline.enter {
+      opacity: 1;
+    }
+  </style>
+
 
     <header>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">HI, I'M JEROME </h1>
                 <hr>
-                <p>I enjoy creating value</p>
-                <p style="font-size:0.8em;">Press [spacebar to continue..] JM to code this story</p>
-                <!-- When user presses spacebar, trigger "animate" event, which will:
-                 - this = array of spans that constitute my story
-                 - this.newspan = this[i+1]
-                 - this.currentspan = this[i]
-                 - Translate the this.currentspan down by 100px, fading opacity from 1 to 0 (linearly?)
-                 - Load the this.newspan at the same location as the old this.currentspan, with "opacity: 0"
-                 - After the this.currentspan has moved down by the current line-height, fade in this.newspan
-                 - i++
-                 - I think the spans need an absolute positioning? -->
-
+                <span class="storyline enter"><span style="color:rgba(0,0,0,0.4);">Press (space) to understand more</span></span>
             </div>
         </div>
     </header>
 
+
+<!-- To be added to main stylesheet -->
 <style>
 body {
   font-family: 'Open Sans', sans-serif;
@@ -94,51 +102,6 @@ body {
 .btn-default:focus{
   outline: none;
 }
-
-</style>
-<style>
-.carousel-fade .carousel-inner .item {
-  transition-property: opacity;
-}
-.carousel-fade .carousel-inner .item,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  opacity: 0;
-}
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-.carousel-fade .carousel-inner .next,
-.carousel-fade .carousel-inner .prev,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  transform: translate3d(0, 0, 0);
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
-}
-
-.carousel,
-.carousel-inner,
-.carousel-inner .item {
-  height: 50vh;
-}
-
-.item {
-  padding-top:80px;
-}
-
-.testimonials {
-  padding-top: 50px;
-}
-
-.carousel-control {
-  background: none !important;
-}
-
 </style>
 
 
@@ -152,6 +115,7 @@ body {
                     <a href="https://calendly.com/jeromeminney/15min" tabindex="-1" target="_blank" class="page-scroll btn btn-default btn-xl sr-button">
                       View Availability
                     </a>
+                    <!-- Consider using typed.js here to change the text on what I can do -->
                     <p class="text-faded"><span>Ask me for advice on:</span>
                        <span class="skillpill">starting technology companies</span>, and
                        <span class="skillpill">getting them ready for growth</span>,
@@ -180,6 +144,52 @@ body {
           </div>
       </div>
     </section>
+
+    <!-- Uncomment these styles and add to stylesheet if/when I get the testimonials slider back
+    <style>
+    .carousel-fade .carousel-inner .item {
+      transition-property: opacity;
+    }
+    .carousel-fade .carousel-inner .item,
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+      opacity: 0;
+    }
+    .carousel-fade .carousel-inner .active,
+    .carousel-fade .carousel-inner .next.left,
+    .carousel-fade .carousel-inner .prev.right {
+      opacity: 1;
+    }
+    .carousel-fade .carousel-inner .next,
+    .carousel-fade .carousel-inner .prev,
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-control {
+      z-index: 2;
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-inner .item {
+      height: 50vh;
+    }
+
+    .item {
+      padding-top:80px;
+    }
+
+    .testimonials {
+      padding-top: 50px;
+    }
+
+    .carousel-control {
+      background: none !important;
+    }
+    </style>
+    -->
 
 
 <!-- SECTION TAG MISSING BECAUSE IT BREAKS THE BG COLOR - FIX THIS -->
@@ -238,6 +248,12 @@ body {
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <!-- React JS & Story-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
+    <script src="js/reactstory.js"></script>
+
 
 </body>
 
