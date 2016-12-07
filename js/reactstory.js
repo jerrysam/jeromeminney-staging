@@ -1,5 +1,29 @@
 
-var strings = ["Hi","it's not easy finding a freelancer, is it?", "referrals don't always come", "you need to know it'll get done", "I get it.", "perhaps we should connect"];
+var strings = [
+  "slow down a bit before pressing (space) again..",
+  "it's ok, the world will keep revolving",
+  "let's reflect on your recent work",
+  "you've achieved some big things recently, haven't you",
+  "it's important to celebrate the small wins ;)",
+  "hmm, let's look at work from a fresh perspective..",
+  "is there potential to think smarter?",
+  "can we offload the more repetative work?",
+  "with more time, how could you get more creative?",
+  "...",
+  "can you feel that sense of excitement?",
+  "there's an opportunity for you to grow here, isn't there?",
+  "I really enjoy mentoring people to achieve",
+  "I dream to transform Education one day, but that's another story",
+  "I get a kick out of finding scalable solutions",
+  "I'm a people person, who knows how to leverage technology",
+  "yes, I coded this animation myself",
+  "anyway... I think we should connect",
+  "there's a lot for us to achieve",
+  "and not much time left to achieve it",
+  "you can arrange a skype if you scroll down a bit :)",
+  "thanks for the chat, see you soon.",
+  "technology | communication | business"
+];
 var i = 0;
 
 var hitElement = document.querySelector( '.storyline' );
