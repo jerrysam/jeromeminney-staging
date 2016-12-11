@@ -1,26 +1,38 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Creative](http://startbootstrap.com/template-overviews/creative/)
+# www.jeromeminney.com personal website
+See www.staging.jeromeminney.com for staging site
 
-[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+## User testing notes
 
-## Getting Started
+### User testing with JBS
+#### Home:
+  Didn't press spacebar, scrolled down immediately.
+    JBS felt the spacebar thing should me much omre eye-catching
+  JBS commented that the flow could be optimised (but we know that's gonna need loads of tweaking)
+  The line about education didn't feel relevant
+  JBS didn't know what to do at the end of the story!
+    technology | commercial | business - looks like links
+    Perhaps the final spacebar press should scroll the user to the next section
+  I think I should change "small" to "little" so that it's not compared with "big"
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/creative/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-creative.git`
-* Fork the repo
+#### Rest of the website:
+  JBS felt that the text / claims need more backing & numbers to prove my ability. Specifically:
+    starting tech companies (companies started), speaking engagements (videos or list of talks), business consultancy (what type?)
+  Overall, JBS wants more of the website to jump out at him. He wants easter eggs and gifts and wow/pazazz, etc
 
-## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-creative/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/creative/).
+### User testing with San
+####Home:
+  First line (press spacebar to continue) should fade in or show interactivity/animation
+  The first line is too small, the rest are too large.. get them both in the middle
+  From "yes I coded this animation myself", it sounds kinda prpetentious, and the story frazzles out for all future lines from there.
+
 
 ## Creator
+Website designed and developed by Jerome Minney
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+Theme created by https://github.com/davidtmiller
+Framework is [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
 ## Copyright and License
 
