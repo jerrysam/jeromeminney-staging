@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- This is the staging file, which I want to merge into the live file -->
+<!-- 08 Dec 01 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jerome Minney - Technologist | Entrepreneur | Educator </title>
+    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<!--
+# User testing with JBS
+Home:
+  Didn't press spacebar, scrolled down immediately.
+    JBS felt the spacebar thing should me much omre eye-catching
+  JBS commented that the flow could be optimised (but we know that's gonna need loads of tweaking)
+  The line about education didn't feel relevant
+  JBS didn't know what to do at the end of the story!
+    technology | commercial | business - looks like links
+    Perhaps the final spacebar press should scroll the user to the next section
+  I think I should change "small" to "little" so that it's not compared with "big"
+
+Rest of the website:
+  JBS felt that the text / claims need more backing & numbers to prove my ability. Specifically:
+    starting tech companies (companies started), speaking engagements (videos or list of talks), business consultancy (what type?)
+  Overall, JBS wants more of the website to jump out at him. He wants easter eggs and gifts and wow/pazazz, etc
+
+
+# User testing with San
+Home:
+  First line (press spacebar to continue) should fade in or show interactivity/animation
+  The first line is too small, the rest are too large.. get them both in the middle
+  From "yes I coded this animation myself", it sounds kinda prpetentious, and the story frazzles out for all future lines from there.
+   -->
+
+
+
+<body id="page-top">
+
+  <!-- React Story Styles -->
+  <style>
+    .storyline {
+      display: inline-block;
+      transition: opacity 250ms linear 150ms;
+      opacity: 0;
+      font-size: 1.7em;
+    }
+    .storyline.fadedown {
+      transition: all 250ms linear;
+      transform: translateY(15px);
+      opacity: 0;
+    }
+    .storyline.enter {
+      opacity: 1;
+    }
+  </style>
+
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">HI, I'M JEROME </h1>
+                <hr>
+                <span class="storyline enter"><span style="color:rgba(0,0,0,0.4);font-size:0.8em;">Press (space) to slow down for a sec..</span></span>
+            </div>
+        </div>
+    </header>
+
+
+<!-- To be added to main stylesheet -->
+<style>
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.header-content {
+  width: 70% !important; /*CLEAN THIS UP JEROME*/
+}
+
+.header-content, header .header-content .header-content-inner p {
+  color: rgba(0,0,0,0.7) !important;
+}
+
+.skillpill {
+  font-weight: 500 ;
+  color: black;
+}
+
+.text-faded {
+  color: rgba(0,0,0,0.7);
+}
+
+#help p, #services p {
+  line-height: 2em;
+  margin: 40px auto;
+}
+
+.btn-default {
+  background-color: #ddd;
+}
+.btn-default:hover {
+  background-color: #F05F40 !important;
+  color:white !important;
+}
+.btn-default:focus{
+  outline: none;
+}
+.bg-primary a {
+  color: rgba(255,255,255,1);
+  font-weight: 500;
+}
+</style>
+
+
+    <section id="help">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="section-heading">Can I help you?</h2>
+                    <hr class="spacey">
+                    <p class="text-faded">Arrange a 15 minute skype and get connected directly</p>
+                    <a href="https://calendly.com/jeromeminney/15min" tabindex="-1" target="_blank" class="page-scroll btn btn-default btn-xl sr-button">
+                      View Availability
+                    </a>
+                    <!-- Consider using typed.js here to change the text on what I can do -->
+                    <p class="text-faded"><span>Ask me for advice on:</span>
+                       <span class="skillpill">starting technology companies</span>, and
+                       <span class="skillpill">getting them ready for growth</span>,
+                    </p>
+                    <p class="text-faded"> <span>Book me for:</span>
+                      <span class="skillpill">web development</span>,
+                      <span class="skillpill">speaking engagements</span>,
+                      <span class="skillpill">business consultancy</span>,
+                      or <br/>kickstarting a new initiative at your company</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="services">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="section-heading">My recent experience</h2>
+                    <hr class="light primary">
+
+                    <p>Having cofounded two software agencies - <a href="http://www.glasscreative.london">Glass Creative</a> and <a href="http://www.mikalabs.co">Mika Labs</a> - I've got a well rounded understanding of digital product delivery and contracting.</p>
+                    <p>In between the two agencies, I had the opportunity to run the Product and Sales function of a <a href="http://www.y1.io">tech startup</a> throughout its' Seed stage. This brought me some priceless learnings about what Product Management is, and navigating cultural differences in international engineering teams.</p>
+                    <p>You’ll find that my experience exemplifies a strong combination of commercial, technical, and communication skills which I'd be more than happy to share.</p>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- CONSIDER HAVING AN EMPATHY - TECHNLOGY - BUSINESS VENN DIAGRAM AS A SECTION BACKGROUND SOMEWHERE -->
+
+    <!-- Uncomment these styles and add to stylesheet if/when I get the testimonials slider back
+    <style>
+    .carousel-fade .carousel-inner .item {
+      transition-property: opacity;
+    }
+    .carousel-fade .carousel-inner .item,
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+      opacity: 0;
+    }
+    .carousel-fade .carousel-inner .active,
+    .carousel-fade .carousel-inner .next.left,
+    .carousel-fade .carousel-inner .prev.right {
+      opacity: 1;
+    }
+    .carousel-fade .carousel-inner .next,
+    .carousel-fade .carousel-inner .prev,
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-control {
+      z-index: 2;
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-inner .item {
+      height: 50vh;
+    }
+
+    .item {
+      padding-top:80px;
+    }
+
+    .testimonials {
+      padding-top: 50px;
+    }
+
+    .carousel-control {
+      background: none !important;
+    }
+    </style>
+    -->
+
+
+<!-- SECTION TAG MISSING BECAUSE IT BREAKS THE BG COLOR - FIX THIS -->
+        <!-- <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="active item">
+                <div class="col-md-2 col-md-offset-2">
+                  <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                </div>
+                <div class="testimonials col-md-6">
+                  <p>1 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><small> - YAYO DUDEMOUS</small></p>
+                </div>
+              </div>
+                <div class="item">
+                  <div class="col-md-2 col-md-offset-2">
+                    <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                  </div>
+                  <div class="testimonials col-md-6">
+                    <p>2 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><small> - YAYO DUDEMOUS</small></p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-2 col-md-offset-2">
+                    <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                  </div>
+                  <div class="testimonials col-md-6">
+                    <p>3 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><small> - YAYO DUDEMOUS</small></p>
+                  </div>
+                </div>
+            </div>
+
+            <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
+            <a class="carousel-control right" href="#carousel" data-slide="next"></a>
+        </div> -->
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+    <!-- React JS & Story-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
+    <script src="js/reactstory.js"></script>
+
+
+</body>
+
+</html>
