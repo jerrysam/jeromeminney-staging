@@ -26,6 +26,30 @@ See www.staging.jeromeminney.com for staging site
   The first line is too small, the rest are too large.. get them both in the middle
   From "yes I coded this animation myself", it sounds kinda prpetentious, and the story frazzles out for all future lines from there.
 
+###Testimonials in the making
+People to ask:
+ - Stefano, Founder and CEO of Nucco Brian
+ - Ekaterina, Founder of Amolingua
+ - Gary, CEO(?) of Mentoring Britain
+ - Al, (website client), founder of Polar Create
+ - Nina, JellyBee films
+ - Alex, Chief Product Officer of Kurv.io
+ - Gabriel, founder of Startup Insights
+ - Jon, Founder of Tech London Slack
+ - Tom OR Leigh, cofounder of SSG
+ - Someone from Plexal?
+ - Daniel, Grant Tree?
+ - Stuart?
+ - Fionn?
+ - Patrick?
+ - Work with Kwamz?
+ - Work with Stephen C?
+Need more:
+ - Hard numbers on how I changed companies
+ -
+
+
+
 
 ## Creator
 Website designed and developed by Jerome Minney
