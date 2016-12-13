@@ -26,12 +26,19 @@ See www.staging.jeromeminney.com for staging site
   The first line is too small, the rest are too large.. get them both in the middle
   From "yes I coded this animation myself", it sounds kinda prpetentious, and the story frazzles out for all future lines from there.
 
+### Jerome's notes / ideas
+  Go back to your mantra's. You know, "open every door and go down the path of least resistance", "the theory of relative success", "no one knows anything about anything", "It's not about achieving your goal, it's about enjoying the journey"
+
 ###Testimonials in the making
 People to ask:
  - Stefano, Founder and CEO of Nucco Brian
  - Ekaterina, Founder of Amolingua
  - Gary, CEO(?) of Mentoring Britain
  - Al, (website client), founder of Polar Create
+ - Umesh (Hackathon Mentoring), founder of Pace Ventures
+    Hey Umesh, I'm just working on a personal website right now and I'm wondering if you have any kind words you're willing to share around hackathon mentoring.
+    Alternatively, if you'd prefer to say something with some more depth, I'd be interested to help out on a side project with Pace so you're able to capture my skills.
+ - Joaquim, founder of MVPLab
  - Nina, JellyBee films
  - Alex, Chief Product Officer of Kurv.io
  - Gabriel, founder of Startup Insights
