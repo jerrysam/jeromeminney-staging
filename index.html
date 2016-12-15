@@ -34,33 +34,6 @@
     <![endif]-->
 </head>
 
-<!--
-# User testing with JBS
-Home:
-  Didn't press spacebar, scrolled down immediately.
-    JBS felt the spacebar thing should me much omre eye-catching
-  JBS commented that the flow could be optimised (but we know that's gonna need loads of tweaking)
-  The line about education didn't feel relevant
-  JBS didn't know what to do at the end of the story!
-    technology | commercial | business - looks like links
-    Perhaps the final spacebar press should scroll the user to the next section
-  I think I should change "small" to "little" so that it's not compared with "big"
-
-Rest of the website:
-  JBS felt that the text / claims need more backing & numbers to prove my ability. Specifically:
-    starting tech companies (companies started), speaking engagements (videos or list of talks), business consultancy (what type?)
-  Overall, JBS wants more of the website to jump out at him. He wants easter eggs and gifts and wow/pazazz, etc
-
-
-# User testing with San
-Home:
-  First line (press spacebar to continue) should fade in or show interactivity/animation
-  The first line is too small, the rest are too large.. get them both in the middle
-  From "yes I coded this animation myself", it sounds kinda prpetentious, and the story frazzles out for all future lines from there.
-   -->
-
-
-
 <body id="page-top">
 
   <!-- React Story Styles -->
@@ -88,6 +61,8 @@ Home:
                 <h1 id="homeHeading">HI, I'M JEROME </h1>
                 <hr>
                 <span class="storyline enter"><span style="color:rgba(0,0,0,0.4);font-size:0.8em;">Press (space) to slow down for a sec..</span></span>
+                <hr>
+                <span>THIS IS A STAGING SITE. COPY IS NOT FINAL. TESTIMONIALS AT THE BOTTOM AREN'T ALL REAL.</span>
             </div>
         </div>
     </header>
@@ -116,8 +91,7 @@ body {
   color: rgba(0,0,0,0.7);
 }
 
-#help p, #services p {
-  line-height: 2em;
+#help p {
   margin: 40px auto;
 }
 
@@ -209,17 +183,8 @@ body {
   .carousel,
   .carousel-inner,
   .carousel-inner .item {
-    min-height: 50vh;
-    margin-bottom: 50px;
+    padding-bottom: 30px;
   }
-
-  .item {
-    padding-top:80px;
-  }
-
-  /*.testimonials {
-    padding-top: 50px;
-  }*/
 
   .carousel-control {
     background: none !important;
@@ -237,10 +202,16 @@ body {
   height: 15px;
 }
 
+.img-circle {
+  opacity: 0.9;
+}
   </style>
 
-
-<!-- SECTION TAG MISSING BECAUSE IT BREAKS THE BG COLOR - FIX THIS -->
+  <section id="services">
+    <div class="container text-center">
+      <div class="row">
+      <h2 class="section-heading">What people say</h2>
+      <hr class="spacey"> <br/>
     <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -256,7 +227,7 @@ body {
               <img alt="" src="img/testimonials/gabriel.jpg" class="img-circle img-responsive" />
             </div>
             <div class="testimonials col-md-6" id="gabs">
-              <p>Jerome is a very well rounded, highly organised and very structured project manager and entrepreneur. His positive can-do attitude as well as his understanding of processes and frameworks have led him to earn the trust from anyone I've met who's worked with him, including myself. I have complete respect for him and confidence in his approach. I look forward to working on more projects together</p>
+              <p>Jerome is a very well rounded entrepreneur, and also a very structured project manager. His positive can-do attitude as well as his understanding of processes and frameworks have led him to earn trust and confidence from anyone I've met who's worked with him, including myself.</p>
               <p><small> - GABRIEL PIZZOLANTE, Founder at <a href="http://startupinsights.uk/">StartupInsights UK</a>, Mentor at <a href="https://developers.google.com/startups/">Google Launchpad</a>, Volunteer at <a href="3-beards.com/silicondrinkabout/london">Silicon Drinkabout</a></small></p>
             </div>
           </div>
@@ -265,17 +236,17 @@ body {
               <img alt="" src="img/testimonials/StefanoFb.jpg" class="img-circle img-responsive" />
             </div>
             <div class="testimonials col-md-6">
-              <p >1 Jerome's a smart little joker, who's able to put himself in the shoes of all stakeholders in a company. Through this, Jerome is able to optimise low-level processes while still evolving a companys' strategy. Talk about Jack of all trades ;)<br/><br/>
+              <p>I've known Jerome since 2012, and since then he's been consistently growing a diverse range of experience. Jerome can put himself in the shoes of any company stakeholder to really optimise low-level processes while still evolving companies at a strategy level.<br/><br/>
               <small> - STEFANO MARRONE, Founder, <a href="http://www.nuccobrain.com">Nucco Brain</a></small></p>
             </div>
           </div>
             <div class="item">
               <div class="col-md-2 col-md-offset-2 col-xs-4">
-                <img alt="" src="http://lorempixel.com/200/200" class="img-circle img-responsive" />
+                <img alt="" src="img/testimonials/nina1.jpg" class="img-circle img-responsive" />
               </div>
               <div class="testimonials col-md-6">
-                <p>2 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><small> - YAYO DUDEMOUS</small></p>
+                <p>Jerome is confident, steadfast, practical and fast. Not only was he able to build me a website within a day - he gave me various options, advice and choices that suited my practical needs. I would highly recommend him as a contractor.</p>
+                <p><small> - NINA SALOMONS, Freelance film director, <a href="http://www.jellybeefilms.com/">Jelly Bee Films</a> </small></p>
               </div>
             </div>
             <div class="item">
@@ -301,6 +272,9 @@ body {
         <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
         <a class="carousel-control right" href="#carousel" data-slide="next"></a>
     </div>
+  </div>
+</div>
+</section>
 
 
     <!-- jQuery -->
