@@ -2,6 +2,19 @@
 See www.staging.jeromeminney.com for staging site
 See jeromeminney.com for live site
 
+## Other notes
+ - Up the font weight and text size
+ - Awwwards color palette for the four circles
+ - Title text: font size and thickness increase
+ - Decrease top&bottom section margin by 1/3
+ - Show that I am validated to speak on these things at this level because x, y, and z
+
+Who am I?
+I don't believe in namedropping, just damn good quality with smart people
+Reputation on what I did for other people
+
+
+
 ## User testing notes
 
 ### User testing with JBS
