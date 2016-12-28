@@ -7,7 +7,7 @@ var strings = [
   "it's important to celebrate the small wins ;)",
   "hmm, let's look at work from a fresh perspective..",
   "is there potential to think smarter?",
-  "can we offload the more repetetive work?",
+  "can we offload the more repetitive work?",
   "with more time, how could you get more creative?",
   "...",
   "can you feel that sense of excitement?",
