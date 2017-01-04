@@ -1,98 +1,67 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var browserSync = require('browser-sync').create();
-var header = require('gulp-header');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
+var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
+    rename = require('gulp-rename');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
+var imagemin = require('gulp-imagemin'),
+    cache = require('gulp-cache');
+var minifycss = require('gulp-minify-css');
+var less = require('gulp-less');
+var browserSync = require('browser-sync');
 
-// Set the banner content
-var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
-    ' */\n',
-    ''
-].join('');
-
-// Compile LESS files from /less into /css
-gulp.task('less', function() {
-    return gulp.src('less/creative.less')
-        .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+       baseDir: "./"
+    }
+  });
 });
 
-// Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/creative.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+// Due to my change at the bottom I think this below function is now redundant And perhaps the one above
+gulp.task('bs-reload', function () {
+  browserSync.reload();
 });
 
-// Minify JS
-gulp.task('minify-js', function() {
-    return gulp.src('js/creative.js')
-        .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+gulp.task('images', function(){
+  gulp.src('src/images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/images/'));
 });
 
-// Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy', function() {
-    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('vendor/bootstrap'))
+gulp.task('styles', function(){
+  gulp.src(['src/styles/**/*.less'])
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(less())
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulp.dest('dist/styles/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('dist/styles/'))
+    .pipe(browserSync.reload({stream:true}))
+});
 
-    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('vendor/jquery'))
+gulp.task('scripts', function(){
+  return gulp.src('src/scripts/**/*.js')
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(browserSync.reload({stream:true}))
+});
 
-    gulp.src(['node_modules/magnific-popup/dist/*'])
-        .pipe(gulp.dest('vendor/magnific-popup'))
-
-    gulp.src(['node_modules/scrollreveal/dist/*.js'])
-        .pipe(gulp.dest('vendor/scrollreveal'))
-
-    gulp.src([
-            'node_modules/font-awesome/**',
-            '!node_modules/font-awesome/**/*.map',
-            '!node_modules/font-awesome/.npmignore',
-            '!node_modules/font-awesome/*.txt',
-            '!node_modules/font-awesome/*.md',
-            '!node_modules/font-awesome/*.json'
-        ])
-        .pipe(gulp.dest('vendor/font-awesome'))
-})
-
-// Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
-
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-    browserSync.init({
-        server: {
-            baseDir: ''
-        },
-    })
-})
-
-// Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('less/*.less', ['less']);
-    gulp.watch('css/*.css', ['minify-css']);
-    gulp.watch('js/*.js', ['minify-js']);
-    // Reloads the browser whenever HTML or JS files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('js/**/*.js', browserSync.reload);
+gulp.task('default', ['browser-sync'], function(){
+  gulp.watch("src/styles/**/*.less", ['styles']);
+  gulp.watch("src/scripts/**/*.js", ['scripts']);
+  gulp.watch('*.html', browserSync.reload); // Had to change this line from something else to make it reload
 });

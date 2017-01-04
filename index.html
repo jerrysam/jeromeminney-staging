@@ -1,323 +1,162 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-<!-- This is the staging file, which I want to merge into the live file -->
-<!-- 08 Dec 01 -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jerome Minney - Technologist | Entrepreneur | Communicator </title>
-    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+    <title>Jerome Minney - Technologist | Communicator | Entrepreneur</title>
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Martel:400,800" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles/screen.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Parallax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- How to manage src/dist with this? -->
+    <script src="../bower_components/parallax/parallax.min.js"></script>
 </head>
 
-<body id="page-top">
+<body>
+  <script src="dist/scripts/main.min.js"></script> <!-- JMEDIT: Should this actually be here? -->
 
-  <!-- React Story Styles -->
-  <style>
-    .storyline {
-      display: inline-block;
-      transition: opacity 250ms linear 150ms;
-      opacity: 0;
-      font-size: 1.7em;
-    }
-    .storyline.fadedown {
-      transition: all 250ms linear;
-      transform: translateY(15px);
-      opacity: 0;
-    }
-    .storyline.enter {
-      opacity: 1;
-    }
-  </style>
-
-
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading">HI, I'M JEROME </h1>
-                <span class="storyline enter"><span style="color:rgba(0,0,0,0.4);">Born in Japan. Made in London.</span></span>
-            </div>
+<!-- Hero Section -->
+    <header class="section" id="hero1">
+      <div class="container">
+        <div class="row header-content">
+            <h1>Jerome Minney</h1>
+            <p id="jmsubtitle">Made in Japan<br/>
+            Based in London<br/>
+            Raised by Google<br/>
+            </p>
+            <p>For the curious, press space..</p>
+        </div> <!-- end row -->
+        <div class="row" id="chevron">
+          <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </div>
+      </div>
+      <!-- JMEDIT I really want to find a more scalable solution for the chevron here. It's currently position absolute, and got a set distance from the bottom. However, I'd love to find a solution where the container, header, or section has a padding (that's equal to the paddings for all other sections), and that padding drives the distance between the chevron and the bottom of the hero section.. Any ideas? -->
     </header>
 
-
-<!-- To be added to main stylesheet -->
-<style>
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-
-body p {
-  padding-top:20px;
-  /*line-height: 2em;*/
-}
-
-.header-content {
-  width: 70% !important; /*CLEAN THIS UP JEROME*/
-  margin-left: 10%;
-}
-
-.header-content, header .header-content .header-content-inner p {
-  text-align: left !important;
-  color: rgba(0,0,0,0.7) !important;
-}
-
-#homeHeading {
-  margin-bottom: 50px !important;
-}
-
-.skillpill {
-  font-weight: 500 ;
-  color: black;
-}
-
-.text-faded {
-  color: rgba(0,0,0,0.7);
-}
-
-#help p {
-  margin: 40px auto;
-}
-
-.btn-default {
-  background-color: #ddd;
-}
-.btn-default:hover {
-  background-color: #F05F40 !important;
-  color:white !important;
-}
-.btn-default:focus{
-  outline: none;
-}
-.bg-primary a {
-  color: rgba(255,255,255,1);
-  font-weight: 500;
-}
-.bg-primary {
-  /*background-image: url(img/light-honeycomb.png);*/
-}
-</style>
-
-
-    <section id="help">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
-                    <h2 class="section-heading">Can I help you?</h2>
-                    <hr class="spacey">
-                    <p class="text-faded">Get connected directly and arrange a 15 minute skype here</p>
-                    <a href="https://calendly.com/jeromeminney/15min" tabindex="-1" target="_blank" class="page-scroll btn btn-default btn-xl sr-button">
-                      View Availability
-                    </a>
-                    <!-- Consider using typed.js here to change the text on what I can do -->
-                    <p class="text-faded"><span>Ask me for advice on:</span>
-                       <span class="skillpill">cutting edge solutions</span>, <span class="skillpill">starting technology companies</span>, and
-                       <span class="skillpill">creating processes for smooth growth</span>
-                    </p>
-                    <p class="text-faded"> <span>Book me for:</span>
-                      <span class="skillpill">web development</span>,
-                      <span class="skillpill">speaking engagements</span>,
-                      <span class="skillpill">business consultancy</span>,
-                      or <br/>kickstarting a new initiative at your company</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-primary" id="services">
+<!-- Skype Section -->
+    <section class="section" id="skype">
       <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
-                    <h2 class="section-heading">My recent experience</h2>
-                    <hr class="light primary">
-
-                    <p>Having cofounded two software agencies - <a href="http://www.glasscreative.london">Glass Creative</a> and <a href="http://www.mikalabs.co">Mika Labs</a> - I've got a well rounded understanding of digital product delivery and contracting.</p>
-                    <p>In between the two agencies, I had the opportunity to run the Product and Sales function of a <a href="http://www.y1.io">tech startup</a> throughout its' Seed stage. This brought me some priceless learnings about what Product Management is, and navigating cultural differences in international engineering teams.</p>
-                    <p>You’ll find that my experience exemplifies a strong combination of commercial, technical, and communication skills which I'd be more than happy to share.</p>
-              </div>
-          </div>
-      </div>
+        <div class="row">
+          <h2>Digital savvy, on tap</h2>
+          <p>I’ve spent my life building competitive teams, analysing digital products, and simplifying processes.</p>
+          <p>The secret to success is in knowing good people. To connect, book a time to chat below, and I’d love to tackle your next biggest challenge over skype.</p>
+          <a href=""> <!-- JMEDIT -->
+            <button type="button" class="btn">Book a time</button>
+          </a>
+        </div> <!-- end row -->
+      </div> <!-- end container -->
     </section>
 
-    <!-- JMEDIT CONSIDER HAVING AN EMPATHY - TECHNLOGY - BUSINESS VENN DIAGRAM AS A SECTION BACKGROUND SOMEWHERE -->
+<!-- Template Section -->
+    <section class="section" id="define">
+      <div class="container">
+        <div class="row">
+          <h3 class="quotes">
+            1. IF YOU <span>DEFINE</span> A PROBLEM, IT BECOMES <span>A GOAL.</span><br/>
+            2. THEN <span>BREAK UP THE STEPS</span> AND WE’RE HALF DONE.</span><br/>
+            3. STAY HUNGRY. YOU’LL START TO <span>SPOT SHORTCUTS.</span><br/>
+            4. <span>LOVE THE VISION</span> AND WE’LL ALWAYS FIND A WAY.
+          </h3>
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section>
 
+<!-- Template Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="row">
+          <h2>I get my hands dirty</h2>
+          <p>I’ve gained a well rounded understanding of digital product delivery and contracting after cofounding two software agencies, Glass Creative and Mika Labs.</p>
+          <p>In between the two agencies, I had the opportunity to run the Product and Sales function of a tech startup throughout its’ Seed stage. This brought me some priceless learnings about what Product Management is, and navigating cultural differences in international engineering teams.</p>
+          <p>You’ll find that my experience exemplifies a strong combination of commercial, technical, and communication skills which I’d be more than happy to share.</p>
+          <a href="mailto:jeromeminney@gmail.com">
+            <button type="button" class="btn">Email Me</button>
+          </a>
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section>
 
-  <style>
-  .carousel-fade .carousel-inner .item {
-    transition-property: opacity;
-  }
-  .carousel-fade .carousel-inner .item,
-  .carousel-fade .carousel-inner .active.left,
-  .carousel-fade .carousel-inner .active.right {
-    opacity: 0;
-  }
-  .carousel-fade .carousel-inner .active,
-  .carousel-fade .carousel-inner .next.left,
-  .carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
-  }
-  .carousel-fade .carousel-inner .next,
-  .carousel-fade .carousel-inner .prev,
-  .carousel-fade .carousel-inner .active.left,
-  .carousel-fade .carousel-inner .active.right {
-    left: 0;
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-fade .carousel-control {
-    z-index: 2;
-  }
+<!-- Dam Image Parallax Section -->
+    <section class="section" id="dam_image">
+      <div class="container">
+        <div class="row">
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section>
 
-  .carousel,
-  .carousel-inner,
-  .carousel-inner .item {
-    padding-bottom: 30px;
-  }
-
-  .carousel-control {
-    background: none !important;
-  }
-
-.carousel-indicators li {
-  border: 2px solid #F05F40;
-  width: 15px;
-  height: 15px;
-  margin: 3px;
-}
-.carousel-indicators .active {
-  border: 10px solid #F05F40;
-  width: 15px;
-  height: 15px;
-}
-
-.img-circle {
-  opacity: 0.9;
-}
-
-.testimonials p {
-  padding-top: 0px;
-}
-.section-heading {
-  text-align:center;
-}
-  </style>
-
-  <section id="services">
-    <div class="container">
-      <div class="row">
-      <h2 class="section-heading">What people say</h2>
-      <hr class="spacey"> <br/>
-    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-            <li data-target="#carousel" data-slide-to="3"></li>
-            <li data-target="#carousel" data-slide-to="4"></li>
-        </ol>
-
-        <div class="carousel-inner">
-
-          <div class="active item">
-            <div class="col-md-2 col-md-offset-2  col-xs-4">
-              <img alt="" src="img/testimonials/StefanoFb.jpg" class="img-circle img-responsive"/>
-            </div>
-            <div class="testimonials col-md-6">
-              <p>I've known Jerome since 2012, and since then he's been consistently growing a diverse range of experience. Jerome can put himself in the shoes of any company stakeholder to really optimise low-level processes while still evolving companies at a strategy level.<br/><br/>
-              <small> - STEFANO MARRONE, Founder, <a href="http://www.nuccobrain.com">Nucco Brain</a></small></p>
+<!-- Template Section -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="row">
+          <h2>Don't ask me, ask them</h2>
+          <div class="rows"> <!-- begin testimonial -->
+            <img src="dist/images/testimonials/stefano.jpg" class="testimonial_image" alt="Stefanos profile"/>
+            <div class="testimonial_container">
+              <h4>On SCALING BUSINESS:</h4>
+              <p>Since 2012, I’ve known Jerome to be driving forward the businesses around him. He’s quick to understand a range of stakeholders and vivacious at finding the best solution for everybody.<br/>
+              - <a href="">STEFANO MARRONE</a>, Founder, <a href="">Nucco Brain</a></p>
             </div>
           </div>
-            <div class="item">
-              <div class="col-md-2 col-md-offset-2 col-xs-4">
-                <img alt="" src="img/testimonials/nina1.jpg" class="img-circle img-responsive" />
-              </div>
-              <div class="testimonials col-md-6">
-                <p>Jerome is confident, steadfast, practical and fast. Not only was he able to build me a website within a day - he gave me various options, advice and choices that suited my practical needs. I would highly recommend him as a contractor.</p>
-                <p><small> - NINA SALOMONS, Freelance film director, <a href="http://www.jellybeefilms.com/">Jelly Bee Films</a> </small></p>
-              </div>
+          <div class="rows testim-right"> <!-- begin testimonial -->
+            <img src="dist/images/testimonials/nina1.jpg" class="testimonial_image" alt="Ninas profile"/>
+            <div class="testimonial_container">
+              <h4>On CONTRACTING:</h4>
+              <p>Jerome is confident, steadfast, practical and fast. Not only was he able to build me a website within a day - he gave me various options, advice and choices that suited my practical needs. I would highly recommend him as a contractor.<br/>
+              - <a href="">NINA SALOMONS</a>, Freelance Producer, <a href="">Jelly Bee Films</a></p>
             </div>
-            <div class="item">
-              <div class="col-md-2 col-md-offset-2 col-xs-4">
-                <img alt="" src="img/testimonials/jo.jpg" class="img-circle img-responsive"  style="box-shadow: 0px 0px 2px 0px #aaa; margin-top: 2px;"/>
+          </div> <!-- end testimonial -->
+
+          <div class="carousel">
+            <div class="rows"> <!-- begin testimonial -->
+              <img src="dist/images/testimonials/jo.jpg" class="testimonial_image" alt="Stefanos profile" style="box-shadow: 0px 0px 4px 0px #aaa;"/>
+              <div class="testimonial_container">
+                <h4>OTHER CHARACTER REFERENCES:</h4>
+                <p>Jerome is one of the few people I know to be an entrepreneur through and through. His passion will always drive him, and his resourcefulness enables him to tackle any problem.
+                I suggest sharing with him your biggest challenge and seeing if it changes your life.<br/>
+                - <a href="">JOAQUIM CANET</a>, Co-founder & Startup Advisor, <a href="">MVPLab</a></p>
               </div>
-              <div class="testimonials col-md-6">
-                <p>Jerome is one of the few people I know to be an entrepreneur through and through.
-                His passion will always drive him, and his resourcefulness enables him to tackle any problem.<br/> I suggest sharing with him your biggest challenge and seeing if it changes your life.</p>
-                <p><small> - JOAQUIM CANET, Co-founder & Startup Advisor, <a href="http://www.mvplab.io/">MVPLab</a></small></p>
-              </div>
+            </div> <!-- end testimonial -->
+            <div class="indicators">
             </div>
-            <div class="item">
-              <div class="col-md-2 col-md-offset-2 col-xs-4">
-                <img alt="" src="img/testimonials/gabriel.jpg" class="img-circle img-responsive" />
-              </div>
-              <div class="testimonials col-md-6" id="gabs">
-                <p>Jerome is a very well rounded entrepreneur, and also a very structured project manager. His positive can-do attitude as well as his understanding of processes and frameworks have led him to earn trust and confidence from anyone I've met who's worked with him, including myself.</p>
-                <p><small> - GABRIEL PIZZOLANTE, Founder at <a href="http://startupinsights.uk/">StartupInsights UK</a>, Mentor at <a href="https://developers.google.com/startups/">Google Launchpad</a>, Volunteer at <a href="3-beards.com/silicondrinkabout/london">Silicon Drinkabout</a></small></p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col-md-2 col-md-offset-2  col-xs-4">
-                <img alt="" src="img/testimonials/anthony.jpg" class="img-circle img-responsive" />
-              </div>
-              <div class="testimonials col-md-6">
-                <p>Jerome started consulting (read: drinking with) us halfway through development of our side project, and he was quick to understand where the project was. <br/>From here, his clear explanations have been pivotal in us moving forward and driving the beta version to completion with a resource-efficient plan.<br/>
-                <small> - ANTHONY MCGUIRE, Global Accounts, <a href="http://www.facebook.com">Facebook</a></small></p>
-              </div>
-            </div>
-        </div>
+          </div> <!-- end carousel -->
 
-        <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
-        <a class="carousel-control right" href="#carousel" data-slide="next"></a>
-    </div>
-  </div>
-</div>
-</section>
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </section>
 
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
-
-    <!-- React JS & Story-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
-    <script src="js/reactstory.js"></script>
-
+    <footer class="section" id="footer">
+      <div class="container">
+        <div class="row">
+          <h4>About that skype...</h4>
+          <a href=""> <!-- JMEDIT -->
+            <button type="button" class="btn btn-footer">Book a time to chat</button>
+          </a>
+          <p>If you prefer writing, drop me an email at jeromeminney@gmail.com</p>
+        </div> <!-- end row -->
+      </div> <!-- end container -->
+    </footer>
 
 </body>
-
-</html>
+<!-- Template Section
+    <section class="section" id="template">
+      <div class="container">
+        <div class="row">
+          <h2>Title</h2>
+          <p>Lorem ipsum</p>
+        </div> <!-- end row
+      </div> <!-- end container
+    </section> -->
