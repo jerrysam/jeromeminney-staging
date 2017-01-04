@@ -7,7 +7,11 @@ var strings = [
   "it's important to celebrate the small wins ;)",
   "hmm, let's look at work from a fresh perspective..",
   "is there potential to think smarter?",
+<<<<<<< HEAD
   "can we offload the more repetative work?",
+=======
+  "can we offload the more repetitive work?",
+>>>>>>> master
   "with more time, how could you get more creative?",
   "...",
   "can you feel that sense of excitement?",
@@ -52,9 +56,18 @@ var renderStories = function() {
 
 
 // Prevent spacebar from scrolling down the page using this SO solution: http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
+<<<<<<< HEAD
 window.onkeydown = function(e) {
     if(e.keyCode == 32 && e.target == document.body) {
         e.preventDefault();
+=======
+// Modified the code again to return to normal after you've gone through the story
+var spacecounter = 0;
+window.onkeydown = function(e) {
+    if(e.keyCode == 32 && e.target == document.body && spacecounter < strings.length-1 ) {
+        e.preventDefault();
+        spacecounter++;
+>>>>>>> master
         return false;
     }
 };
