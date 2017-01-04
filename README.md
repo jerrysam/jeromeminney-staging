@@ -1,7 +1,5 @@
 # www.jeromeminney.com personal website
 See www.staging.jeromeminney.com for staging site
-<<<<<<< HEAD
-=======
 See jeromeminney.com for live site
 
 ## Other notes
@@ -16,24 +14,10 @@ I don't believe in namedropping, just damn good quality with smart people
 Reputation on what I did for other people
 
 
->>>>>>> master
 
 ## User testing notes
 
 ### User testing with JBS
-<<<<<<< HEAD
-#### Home:
-  Didn't press spacebar, scrolled down immediately.
-    JBS felt the spacebar thing should me much omre eye-catching
-  JBS commented that the flow could be optimised (but we know that's gonna need loads of tweaking)
-  The line about education didn't feel relevant
-  JBS didn't know what to do at the end of the story!
-    technology | commercial | business - looks like links
-    Perhaps the final spacebar press should scroll the user to the next section
-  I think I should change "small" to "little" so that it's not compared with "big"
-
-#### Rest of the website:
-=======
   Didn't press spacebar, scrolled down immediately.
     JBS felt the spacebar thing should me much more eye-catching
   JBS commented that the flow could be optimised (but we know that's gonna need loads of tweaking)
@@ -43,19 +27,10 @@ Reputation on what I did for other people
 
   I think I should change "small" to "little" so that it's not compared with "big"
 
->>>>>>> master
   JBS felt that the text / claims need more backing & numbers to prove my ability. Specifically:
     starting tech companies (companies started), speaking engagements (videos or list of talks), business consultancy (what type?)
   Overall, JBS wants more of the website to jump out at him. He wants easter eggs and gifts and wow/pazazz, etc
 
-<<<<<<< HEAD
-
-### User testing with San
-####Home:
-  First line (press spacebar to continue) should fade in or show interactivity/animation
-  The first line is too small, the rest are too large.. get them both in the middle
-  From "yes I coded this animation myself", it sounds kinda prpetentious, and the story frazzles out for all future lines from there.
-=======
   <!--DONE: Perhaps the final spacebar press should scroll the user to the next section -->
 
 ### User testing with San
@@ -93,7 +68,6 @@ Need more:
  -
 
 
->>>>>>> master
 
 
 ## Creator
