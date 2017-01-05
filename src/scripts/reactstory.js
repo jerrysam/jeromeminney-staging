@@ -48,6 +48,7 @@ var renderStories = function() {
     hitElement.classList.remove('fadedown');
     hitElement.classList.add('enter');
   }, 250);
+  $('.fadeup').addClass('go');
 }
 
 
