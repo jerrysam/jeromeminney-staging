@@ -1,0 +1,155 @@
+// Global CSS goes here
+
+// Font, button
+
+@import "variables.less";
+@import "mixins.less";
+
+// Typography
+html,
+body {
+    // height: 100%;
+    // width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    p {
+        font-size: 16px;
+        line-height: 25px;
+        color: #3F4044;
+        margin-bottom: 33px;
+    }
+}
+
+hr {
+    border-color: @theme-accent;
+    border-width: 3px;
+    max-width: 50px;
+    margin: 20px 0px;
+    border: 0;
+    border-top: 1px solid #eee;
+    height: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Martel', serif;
+    color: #505873;
+}
+
+h2 {
+  position: relative;
+  margin-bottom: 45px;
+}
+h2:after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left:calc(~'50% - 25px');
+  width: 50px;
+  height: 3px; // suit your need
+  background: @theme-accent; // suit your need
+}
+
+h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 62px;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+a {
+    .transition-all;
+    color: @theme-accent;
+    &:hover,
+    &:focus {
+        color: darken(@theme-accent, 10%);
+    }
+}
+
+
+// Sections
+section, footer {
+    padding: 60px 0;
+    text-align: center;
+    clear: both;
+}
+
+.row {
+  width:60%;
+  margin: auto;
+  @media only screen and (max-width: @tabsize) {
+    width: 80%;
+  }
+}
+// .no-padding {
+//     padding: 0;
+// }
+
+.bg-primary {
+    background-color: @theme-primary;
+}
+
+.bg-offwhite {
+    background-color: @theme-offwhite;
+    color: white;
+}
+
+
+
+// Extras
+// -- Highlight Color Customization
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: @gray-darker;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: @gray-darker;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: @gray-darker;
+}
+
+
+// Buttons
+.btn {
+    .button-variant(@btn-text;@btn-bg;@btn-bg);
+    border-radius:100px;
+    text-transform: uppercase;
+    margin: 30px;
+    padding:10px 30px;
+    font-weight: 700;
+    min-width: 200px;
+    :focus {
+      outline: 0;
+    }
+}

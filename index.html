@@ -23,7 +23,7 @@
     <!-- Parallax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- How to manage src/dist with this? -->
-    <script src="../bower_components/parallax/parallax.min.js"></script>
+    <script src="bower_components/parallax.js/parallax.min.js"></script>
 </head>
 
 <body>
@@ -33,12 +33,12 @@
     <header class="section" id="hero1">
       <div class="container">
         <div class="row header-content">
-            <h1>Jerome Minney</h1>
-            <p id="jmsubtitle">Made in Japan<br/>
+            <h1 class="fadeup">Jerome Minney</h1>
+            <p class="fadeup">Made in Japan<br/>
             Based in London<br/>
             Raised by Google<br/>
             </p>
-            <p>For the curious, press space..</p>
+            <p class="storyline enter">For the curious, press space..</p>
         </div> <!-- end row -->
         <div class="row" id="chevron">
           <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
@@ -149,6 +149,11 @@
         </div> <!-- end row -->
       </div> <!-- end container -->
     </footer>
+
+    <!-- React JS & Story-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
+    <script src="dist/scripts/main.js"></script>
 
 </body>
 <!-- Template Section

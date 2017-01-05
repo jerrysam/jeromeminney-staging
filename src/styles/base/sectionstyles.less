@@ -1,0 +1,131 @@
+// Homepage Header
+
+//Hero1
+#hero1 {
+  min-height: 100%;
+  .background-cover;
+  background-position: center;
+  background-image: url('../images/header.jpg');
+  position: relative;
+  color: @gray-text;
+
+  .header-content {
+      padding: 11% 0%; // JMEDIT: Why is this % smaller on mobile?
+      width:70%; //overriding the normal row width here
+      // position: relative;
+      text-align: left;
+
+      #jmsubtitle {
+        font-size:22px;
+        line-height: 30px;
+      }
+  }
+
+    #chevron {
+      font-size:70px;
+      text-align: center;
+      position: absolute;
+      bottom:100px;
+      width: 100%;
+    }
+}
+
+
+
+
+.storyline {
+  display: inline-block;
+  transition: opacity 250ms linear 150ms;
+  opacity: 0;
+}
+.storyline.fadedown {
+  transition: all 250ms linear;
+  transform: translateY(15px);
+  opacity: 0;
+}
+.storyline.enter {
+  opacity: 1;
+}
+
+
+
+#skype {
+
+}
+
+#define {
+  background-color: @theme-primary;
+  .quotes {
+  color: @theme-accent;
+  }
+  span {
+    color: @white-text;
+  }
+}
+
+#experience {
+  background-color: @theme-offwhite;
+}
+
+#dam_image {
+  background-image: url(../images/dam_image.jpg);
+  height: 250px;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+#testimonials {
+  min-height: 1000px; // JMEDIT: This is temporary - delete this please
+  @tesim_img_width:  150px;
+  .rows {
+    padding-top: 50px;
+    clear: both;
+  }
+  p, h4 {
+    margin: 0px;
+  }
+  .testimonial_container {
+    float: left;
+    width:calc(~'100% - @{tesim_img_width} - 30px');
+    text-align: left;
+    margin-left: 30px;
+  }
+  .testim-right {
+    .testimonial_container {
+      text-align: right;
+      margin: 0 30px 0 0;
+    }
+    img {
+      float: right;
+    }
+  }
+  img {
+    width: @tesim_img_width;
+    height: @tesim_img_width;
+    border-radius: 100%;
+    opacity: 0.9;
+    float: left;
+  }
+  @media only screen and (max-width: @tabsize) {
+    img, .testimonial_container, .testim-right .testimonial_container, .testim-right img {
+      margin: 10px auto;
+      clear: both;
+      float: none;
+      text-align: center;
+    }
+    .testimonial_container {
+      width:100%;
+    }
+  }
+}
+
+#footer {
+  background-color: @theme-primary;
+  h4, p {
+      color: @theme-primary-lighter;
+  }
+  .btn-footer {
+    background-color: @theme-primary-lighter;
+    color: @theme-primary;
+  }
+}

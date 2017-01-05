@@ -1,3 +1,8 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -122,4 +127,7 @@ body {
 .btn.focus,
 .btn:active {
   background-color: #bfbfbf;
+}
+.btn :focus {
+  outline: 0;
 }
