@@ -31,6 +31,10 @@ h6 {
   font-family: 'Martel', serif;
   color: #505873;
 }
+h1 {
+  font-size: 40px;
+  line-height: 67px;
+}
 h2 {
   position: relative;
   margin-bottom: 45px;

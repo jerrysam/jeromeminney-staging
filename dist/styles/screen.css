@@ -386,6 +386,10 @@ h6 {
   font-family: 'Martel', serif;
   color: #505873;
 }
+h1 {
+  font-size: 40px;
+  line-height: 67px;
+}
 h2 {
   position: relative;
   margin-bottom: 45px;
@@ -496,7 +500,7 @@ body {
   width: 70%;
   text-align: left;
 }
-#hero1 .header-content #jmsubtitle {
+#hero1 .header-content .jmsubtitle {
   font-size: 22px;
   line-height: 30px;
 }

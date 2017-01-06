@@ -40,7 +40,7 @@ var addHit = function() {
   }
 }
 
-var pxY = -10;
+var pxY = -50; //Need to absolute position this and make it a % from the top so it's scalable as I change font sizes, etc
 var renderStories = function() {
   if (i == 1) {
     enterWorld();
