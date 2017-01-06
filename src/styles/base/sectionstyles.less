@@ -38,19 +38,21 @@
   transition: opacity 250ms linear 150ms;
   opacity: 0;
 }
-.storyline.fadedown {
+.fadedown {
   transition: all 250ms linear;
   transform: translateY(-15px);
   opacity: 1;
 }
-.storyline.enter {
+.storyline.visible {
   opacity: 1;
+  position: absolute;
 }
 
-.fadeup.go {
+.go {
   transition: all 250ms linear;
-  transform: translateY(-50px);
+  transform: translateY(-10px);
   opacity: 0;
+  clear: both;
   color: red;
 }
 

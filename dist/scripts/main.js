@@ -40,13 +40,14 @@ var addHit = function() {
   }
 }
 
+var pxY = -25;
 var renderStories = function() {
-  hitElement.classList.remove('enter');
+  pxY = pxY - 25;
+  $(".fadedown").css("transform", "translateY(" + pxY + "px)");
   hitElement.classList.add('fadedown');
   setTimeout(function() {
-    hitElement.innerHTML = strings[i];
-    hitElement.classList.remove('fadedown');
-    hitElement.classList.add('enter');
+    hitElement.innerHTML = hitElement.innerHTML + "<br/>" + strings[i];
+    hitElement.classList.add('visible');
   }, 250);
   $('.fadeup').addClass('go');
 }
