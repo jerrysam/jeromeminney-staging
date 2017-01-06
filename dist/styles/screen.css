@@ -534,8 +534,8 @@ body {
   display: inline-block;
   -webkit-transition: opacity 500ms linear 500ms;
           transition: opacity 500ms linear 500ms;
-  -webkit-transition: all 1000ms linear;
-          transition: all 1000ms linear;
+  -webkit-transition: all 500ms linear;
+          transition: all 500ms linear;
   opacity: 1;
   position: absolute;
 }
@@ -551,8 +551,8 @@ body {
 .newline {
   -webkit-transition: all 250ms linear;
           transition: all 250ms linear;
-  -webkit-transition: all 1000ms linear;
-          transition: all 1000ms linear;
+  -webkit-transition: all 500ms linear;
+          transition: all 500ms linear;
   opacity: 1;
   font-size: 22px;
   line-height: 40px;
@@ -658,7 +658,7 @@ body {
   opacity: 0;
 }
 .visible {
-  -webkit-transition: all 1000ms linear;
-          transition: all 1000ms linear;
+  -webkit-transition: all 500ms linear;
+          transition: all 500ms linear;
   opacity: 1;
 }

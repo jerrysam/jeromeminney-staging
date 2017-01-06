@@ -59,7 +59,7 @@ var addLine = function() {
   $(".newline").css("transform", "translateY(" + pxY + "px)");
   rendering = true;
   setTimeout(function() {
-    hitElement.innerHTML = hitElement.innerHTML + "<br/>" + strings[i];
+    hitElement.innerHTML = hitElement.innerHTML + "<br/>" + strings[i-1];
     rendering = false;
   }, 250);
 }
