@@ -24,10 +24,11 @@ var strings = [
   "thanks for the chat, see you soon."
 ];
 var i = 0;
+var rendering = false;
 
 var hitElement = document.querySelector( '.storyline' );
 document.body.onkeyup = function(e) {
-  if( e.keyCode == 32 ) {
+  if( e.keyCode == 32 && rendering == false) {
     addHit();
   }
 }
@@ -41,16 +42,27 @@ var addHit = function() {
 
 var pxY = -10;
 var renderStories = function() {
-  pxY = pxY - 40;
+  if (i == 1) {
+    enterWorld();
+  }
+  addLine();
+}
+
+var enterWorld = function() {
   hitElement.classList.add('newline');
-  $(".newline").css("transform", "translateY(" + pxY + "px)");
-  setTimeout(function() {
-    hitElement.innerHTML = hitElement.innerHTML + "<br/>" + strings[i];
-  }, 250);
-  $('.fadeup').addClass('go');
+  $('.fadeup').addClass('enterworld');
   $('#hero1').addClass('blur');
 }
 
+var addLine = function() {
+  pxY = pxY - 40;
+  $(".newline").css("transform", "translateY(" + pxY + "px)");
+  rendering = true;
+  setTimeout(function() {
+    hitElement.innerHTML = hitElement.innerHTML + "<br/>" + strings[i];
+    rendering = false;
+  }, 250);
+}
 
 // Prevent spacebar from scrolling down the page using this SO solution: http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
 // Modified the code again to return to normal after you've gone through the story
@@ -63,15 +75,22 @@ window.onkeydown = function(e) {
     } else if (e.keyCode == 32 && e.target == document.body && spacecounter == strings.length-1) {
         e.preventDefault();
         spacecounter++;
-        pxY = pxY - 100;
-        $(".newline").css("transform", "translateY(" + pxY + "px)");
-        $(".newline").css("opacity", "0");
-        $('.header-content').append("<p class='new_subtitle invisible'>Technology | Communication | Business</p>");
-        setTimeout(function() {
-          $('.new_subtitle').removeClass('invisible');
-          $('.fadeup').removeClass('go');
-          $('#hero1').removeClass('blur');
-        }, 500)
+        leaveWorld();
         return false;
     }
 };
+
+var leaveWorld = function () {
+  // Remove text
+  pxY = pxY - 100;
+  $(".newline").css("transform", "translateY(" + pxY + "px)");
+  $(".newline").css("opacity", "0");
+  // Slip in the new subtitle
+  $('.header-content').append("<p class='new_subtitle'>Technology | Communication | Business</p>");
+  // Return to normal
+  setTimeout(function() {
+    $('.fadeup').removeClass('enterworld');
+    $('#hero1').removeClass('blur');
+    $('.new_subtitle').addClass('visible');
+  }, 500)
+}

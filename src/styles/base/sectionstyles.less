@@ -27,7 +27,7 @@
 }
 
 @story_initiate_time: 500ms;
-@newline_time: 200ms;
+@newline_time: 250ms;
 
 #hero1:before {
   transition: all @story_initiate_time linear;
@@ -55,7 +55,7 @@
 .storyline {
   display: inline-block;
   transition: opacity @story_initiate_time linear @story_initiate_time;
-  opacity: 1;
+  .visible;
   position: absolute;
 }
 @media only screen and (max-width: @tabsize) {
@@ -69,16 +69,16 @@
 }
 .newline {
   transition: all @newline_time linear;
-  opacity: 1;
+  .visible;
   font-size: 22px;
   line-height: 40px;
   font-weight: 600;
 }
 
-.go {
+.fadeup.enterworld {
   transition: all @story_initiate_time linear;
   transform: translateY(-10px);
-  opacity: 0;
+  .invisible;
   clear: both;
 }
 
@@ -86,9 +86,6 @@
   transition: all @story_initiate_time linear;
   clear: both;
   font-weight: 600;
-  opacity: 1;
-}
-.invisible {
   opacity: 0;
 }
 
@@ -173,4 +170,15 @@
     background-color: @theme-primary-lighter;
     color: @theme-primary;
   }
+}
+
+
+// Tools
+.invisible {
+  transition: all 1000ms linear;
+  opacity: 0;
+}
+.visible {
+  transition: all 1000ms linear;
+  opacity: 1;
 }
