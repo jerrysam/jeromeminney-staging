@@ -117,7 +117,7 @@
 }
 
 #testimonials {
-  min-height: 1000px; // JMEDIT: This is temporary - delete this please
+  //min-height: 1000px; // JMEDIT: This is temporary - delete this please
   @tesim_img_width:  150px;
   .rows {
     padding-top: 50px;
@@ -159,6 +159,11 @@
       width:100%;
     }
   }
+  .indicators {
+    padding:50px;
+    clear: both;
+    font-style: italic;
+  }
 }
 
 #footer {
@@ -175,7 +180,7 @@
 
 // Tools
 .invisible {
-  transition: all 1000ms linear;
+  transition: all @story_initiate_time linear;
   opacity: 0;
 }
 .visible {
