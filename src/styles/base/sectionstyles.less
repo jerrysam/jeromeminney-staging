@@ -3,16 +3,12 @@
 //Hero1
 #hero1 {
   height: 100%;
-  .background-cover;
-  background-position: center;
-  background-image: url('../images/header.jpg');
   position: relative;
   color: @gray-text;
 
   .header-content {
       padding: 11% 0%; // JMEDIT: Why is this % smaller on mobile?
       width:70%; //overriding the normal row width here
-      // position: relative;
       text-align: left;
 
       #jmsubtitle {
@@ -30,9 +26,35 @@
     }
 }
 
+@story_initiate_time: 500ms;
+@newline_time: 200ms;
+
+#hero1:before {
+  transition: all @story_initiate_time linear;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url('../images/header.jpg');
+  .background-cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.blur:before {
+    transition: all @story_initiate_time linear;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+// Storyline
 .storyline {
   display: inline-block;
-  transition: opacity 250ms linear 150ms;
+  transition: opacity @story_initiate_time linear @story_initiate_time;
   opacity: 1;
   position: absolute;
 }
@@ -43,10 +65,10 @@
 }
 
 .fadeup {
-  transition: all 250ms linear;
+  transition: all @story_initiate_time linear;
 }
 .newline {
-  transition: all 250ms linear;
+  transition: all @newline_time linear;
   opacity: 1;
   font-size: 22px;
   line-height: 40px;
@@ -54,20 +76,26 @@
 }
 
 .go {
-  transition: all 250ms linear;
+  transition: all @story_initiate_time linear;
   transform: translateY(-10px);
   opacity: 0;
   clear: both;
-  color: red;
 }
 
 .new_subtitle {
+  transition: all @story_initiate_time linear;
   clear: both;
+  font-weight: 600;
+  opacity: 1;
+}
+.invisible {
+  opacity: 0;
 }
 
 
+// Skype section
 #skype {
-
+  background-color: white;
 }
 
 #define {

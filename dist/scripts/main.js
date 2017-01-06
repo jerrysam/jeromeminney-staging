@@ -39,7 +39,7 @@ var addHit = function() {
   }
 }
 
-var pxY = 0;
+var pxY = -10;
 var renderStories = function() {
   pxY = pxY - 40;
   hitElement.classList.add('newline');
@@ -48,6 +48,7 @@ var renderStories = function() {
     hitElement.innerHTML = hitElement.innerHTML + "<br/>" + strings[i];
   }, 250);
   $('.fadeup').addClass('go');
+  $('#hero1').addClass('blur');
 }
 
 
@@ -65,10 +66,11 @@ window.onkeydown = function(e) {
         pxY = pxY - 100;
         $(".newline").css("transform", "translateY(" + pxY + "px)");
         $(".newline").css("opacity", "0");
-
+        $('.header-content').append("<p class='new_subtitle invisible'>Technology | Communication | Business</p>");
         setTimeout(function() {
-          $('.header-content').append("<p class='new_subtitle'>Technology | Communication | Business</p>");
+          $('.new_subtitle').removeClass('invisible');
           $('.fadeup').removeClass('go');
+          $('#hero1').removeClass('blur');
         }, 500)
         return false;
     }
