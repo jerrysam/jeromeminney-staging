@@ -21,8 +21,7 @@ var strings = [
   "there's a lot for us to achieve",
   "and not much time left to achieve it",
   "you can arrange a skype if you scroll down a bit :)",
-  "thanks for the chat, see you soon.",
-  "technology | communication | business"
+  "thanks for the chat, see you soon."
 ];
 var i = 0;
 
@@ -34,7 +33,7 @@ document.body.onkeyup = function(e) {
 }
 
 var addHit = function() {
-  if ( i+2 <= strings.length) {
+  if ( i+1 < strings.length) {
   i++
   renderStories();
   }
@@ -59,6 +58,18 @@ window.onkeydown = function(e) {
     if(e.keyCode == 32 && e.target == document.body && spacecounter < strings.length-1 ) {
         e.preventDefault();
         spacecounter++;
+        return false;
+    } else if (e.keyCode == 32 && e.target == document.body && spacecounter == strings.length-1) {
+        e.preventDefault();
+        spacecounter++;
+        pxY = pxY - 100;
+        $(".newline").css("transform", "translateY(" + pxY + "px)");
+        $(".newline").css("opacity", "0");
+
+        setTimeout(function() {
+          $('.header-content').append("<p class='new_subtitle'>Technology | Communication | Business</p>");
+          $('.fadeup').removeClass('go');
+        }, 500)
         return false;
     }
 };
