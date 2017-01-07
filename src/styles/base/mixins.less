@@ -1,0 +1,28 @@
+
+.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.transition-all() {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.button-variant(@color; @background; @hover; @hovercolor) {
+	color: black;
+	background-color: @background;
+  border:0px;
+	.transition-all;
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active {
+		background-color: @hover;
+    color: @hovercolor;
+	}
+
+}
