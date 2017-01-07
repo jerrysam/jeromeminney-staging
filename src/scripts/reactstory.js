@@ -1,22 +1,16 @@
-
 var strings = [
-  "slow down a bit before pressing (space) again..",
-  "it's ok, the world will keep revolving",
+  "Breathe in for 5 seconds before pressing (space) again..",
   "let's reflect on your recent work",
-  "you've achieved some big things recently, haven't you",
-  "it's important to celebrate the small wins ;)",
+  "think back and smile about your recent achievements",
   "hmm, let's look at work from a fresh perspective..",
-  "is there potential to think smarter?",
-  "can we offload the more repetitive work?",
-  "with more time, how could you get more creative?",
-  "...",
-  "can you feel that sense of excitement?",
+  "perhaps you'd like a bit more time for new things",
+  "Do you really need to do all the work you currently do?",
+  "Imagine your creativity if you had more time",
+  "(or scroll down instead). Press space when your imagination stops..",
   "there's an opportunity for you to grow here, isn't there?",
   "I really enjoy mentoring people to achieve",
-  "I dream to transform Education one day, but that's another story",
-  "I get a kick out of finding scalable solutions",
   "I'm a people person, who knows how to leverage technology",
-  "yes, I coded this animation myself",
+  "(Indeed, I designed and developed this website myself)",
   "anyway... I think we should connect",
   "there's a lot for us to achieve",
   "and not much time left to achieve it",
@@ -25,19 +19,31 @@ var strings = [
 ];
 var i = 0;
 var rendering = false;
-
+var spacecounter = 0;
 var hitElement = document.querySelector( '.storyline' );
+
+// Prevent spacebar from scrolling down the page using this SO solution: http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
+window.onkeydown = function(e) {
+    if(e.keyCode == 32 && e.target == document.body) {
+      e.preventDefault();
+    }
+  }
+
 document.body.onkeyup = function(e) {
   if( e.keyCode == 32 && rendering == false) {
     addHit();
+    if ( i <= strings.length) {
+      renderStories();
+    } else if (i > strings.length) {
+      leaveWorld();
+    }
   }
+  return false;
 }
 
 var addHit = function() {
-  if ( i+1 < strings.length) {
-  i++
-  renderStories();
-  }
+  i++;
+  spacecounter++;
 }
 
 var pxY = -50; //Need to absolute position this and make it a % from the top so it's scalable as I change font sizes, etc
@@ -52,6 +58,7 @@ var enterWorld = function() {
   hitElement.classList.add('newline');
   $('.fadeup').addClass('enterworld');
   $('#hero1').addClass('blur');
+  $('.storyline').removeClass('storyline_font');
 }
 
 var addLine = function() {
@@ -63,22 +70,6 @@ var addLine = function() {
     rendering = false;
   }, 250);
 }
-
-// Prevent spacebar from scrolling down the page using this SO solution: http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
-// Modified the code again to return to normal after you've gone through the story
-var spacecounter = 0;
-window.onkeydown = function(e) {
-    if(e.keyCode == 32 && e.target == document.body && spacecounter < strings.length-1 ) {
-        e.preventDefault();
-        spacecounter++;
-        return false;
-    } else if (e.keyCode == 32 && e.target == document.body && spacecounter == strings.length-1) {
-        e.preventDefault();
-        spacecounter++;
-        leaveWorld();
-        return false;
-    }
-};
 
 var leaveWorld = function () {
   // Remove text
@@ -94,3 +85,19 @@ var leaveWorld = function () {
     $('.new_subtitle').addClass('visible');
   }, 500)
 }
+
+
+// Breathe in for 5 seconds, before releasing the air and continuing to press space.
+// Welcome to a new world. Come take a look around.
+// This is a world of creativity. Of producticity. Of balance.
+// A world for the intelligent, the dreamers, and of the team players.
+// This is a world of where work doesn't expand to fill the time you give it.
+// A world where work days end with satisfaction from a productive day, making you happy to retire into the evening.
+// A world where every person can capture their potential.
+// Every person can focus on doing what they enjoy most.
+// Each and every one of us are surrounded by love.
+// The path to this world is hard. Many people have spent a decade pursuing it.
+// But this is my pursuit, and I'm open to taking passengers.
+// Thanks for the chat. Scroll down to read more and arange an exploratory skype with me.
+
+// Breathe in for 5 seconds, before releasing the air and continuing to press space.

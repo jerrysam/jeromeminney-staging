@@ -17,8 +17,8 @@ body {
 body {
     font-family: 'Open Sans', sans-serif;
     p {
-        font-size: 16px;
-        line-height: 25px;
+        font-size: 18px;
+        line-height: 30px;
         color: #3F4044;
         margin-bottom: 33px;
     }
@@ -50,6 +50,8 @@ h6 {
 h1 {
   font-size: 40px;
   line-height: 67px;
+  color: rgba(0,0,0,0.6);
+  margin: 0 0 15px 0;
 }
 
 h2 {
@@ -80,6 +82,8 @@ h4 {
 a {
     .transition-all;
     color: @theme-accent;
+    font-weight: 700;
+    text-decoration: none;
     &:hover,
     &:focus {
         color: darken(@theme-accent, 10%);
@@ -147,7 +151,7 @@ body {
 
 // Buttons
 .btn {
-    .button-variant(@btn-text;@btn-bg;@btn-bg);
+    .button-variant(@black;@btn-bg;@theme-accent;@white);
     border-radius:100px;
     text-transform: uppercase;
     margin: 30px;

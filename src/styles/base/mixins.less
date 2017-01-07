@@ -7,22 +7,22 @@
 }
 
 .transition-all() {
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    transition: all 0.35s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-.button-variant(@color; @background; @border) {
-	color: @color;
+.button-variant(@color; @background; @hover; @hovercolor) {
+	color: black;
 	background-color: @background;
   border:0px;
 	.transition-all;
-
 	&:hover,
 	&:focus,
 	&.focus,
 	&:active {
-		background-color: darken(@background, 5%);
+		background-color: @hover;
+    color: @hovercolor;
 	}
 
 }

@@ -7,8 +7,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 body p {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 30px;
   color: #3F4044;
   margin-bottom: 33px;
 }
@@ -34,6 +34,8 @@ h6 {
 h1 {
   font-size: 40px;
   line-height: 67px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 0 15px 0;
 }
 h2 {
   position: relative;
@@ -58,9 +60,11 @@ h4 {
   font-size: 16px;
 }
 a {
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   color: #C76368;
+  font-weight: 700;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
@@ -114,11 +118,11 @@ body {
   webkit-tap-highlight-color: #222222;
 }
 .btn {
-  color: #000;
+  color: black;
   background-color: #CCCCCC;
   border: 0px;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   border-radius: 100px;
   text-transform: uppercase;
   margin: 30px;
@@ -130,7 +134,8 @@ body {
 .btn:focus,
 .btn.focus,
 .btn:active {
-  background-color: #bfbfbf;
+  background-color: #C76368;
+  color: #FFF;
 }
 .btn :focus {
   outline: 0;

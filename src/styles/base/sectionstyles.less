@@ -7,22 +7,55 @@
   color: @gray-text;
 
   .header-content {
-      padding: 11% 0%; // JMEDIT: Why is this % smaller on mobile?
+      padding: 30vh 0%; // JMEDIT: Why is this % smaller on mobile?
       width:70%; //overriding the normal row width here
       text-align: left;
 
       .jmsubtitle {
         font-size:22px;
-        line-height: 30px;
+        line-height: 42px;
+        margin: 0 0 20px 0;
+        font-weight: bold;
+        color: rgba(0,0,0,0.5);
+      }
+      h2:after {
+        display: none;
+      }
+      .storyline {
+        display: inline-block;
+        transition: opacity @story_initiate_time linear @story_initiate_time;
+        .visible;
+        position: absolute;
+        margin: 0 0 20px 0;
+      }
+      .storyline_font {
+        font-size: 18px;
+        font-weight: 500;
+        color: rgba(0,0,0,0.5);
+      }
+      @media only screen and (max-width: @tabsize) {
+        .storyline {
+          display: none;
+        }
       }
   }
 
     #chevron {
-      font-size:70px;
       text-align: center;
       position: absolute;
       bottom:10%;
       width: 100%;
+      i {
+        color: rgba(0,0,0,0);
+        font-size:70px;
+        .transition-all
+      }
+      i:hover {
+        color: @theme-accent-faded;
+      }
+      .chevron_show {
+        color: rgba(0,0,0,0.6);
+      }
     }
 }
 
@@ -52,18 +85,6 @@
 }
 
 // Storyline
-.storyline {
-  display: inline-block;
-  transition: opacity @story_initiate_time linear @story_initiate_time;
-  .visible;
-  position: absolute;
-}
-@media only screen and (max-width: @tabsize) {
-  .storyline {
-    display: none;
-  }
-}
-
 .fadeup {
   transition: all @story_initiate_time linear;
 }
@@ -71,8 +92,9 @@
   transition: all @newline_time linear;
   .visible;
   font-size: 22px;
-  line-height: 40px;
+  line-height: 42px;
   font-weight: 600;
+  color: rgba(0,0,0,0.7);
 }
 
 .fadeup.enterworld {
@@ -101,30 +123,41 @@
   color: @theme-accent;
   }
   span {
-    color: @white-text;
+    color: @white;
   }
 }
 
 #experience {
   background-color: @theme-offwhite;
+  .bold {
+    font-weight: 600;
+  }
 }
 
 #dam_image {
   background-image: url(../images/dam_image.jpg);
+  .background-cover;
   height: 250px;
   background-position: center top;
-  background-size: 100% auto;
 }
 
 #testimonials {
   //min-height: 1000px; // JMEDIT: This is temporary - delete this please
   @tesim_img_width:  150px;
   .rows {
-    padding-top: 50px;
+    padding-top: 30px;
     clear: both;
   }
+  .zeropad {
+    padding: 0px;
+  }
   p, h4 {
-    margin: 0px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  a, h4 {
+    line-height: 40px;
   }
   .testimonial_container {
     float: left;
@@ -147,6 +180,7 @@
     border-radius: 100%;
     opacity: 0.9;
     float: left;
+    margin-top: 15px;
   }
   @media only screen and (max-width: @tabsize) {
     img, .testimonial_container, .testim-right .testimonial_container, .testim-right img {
@@ -172,7 +206,7 @@
       color: @theme-primary-lighter;
   }
   .btn-footer {
-    background-color: @theme-primary-lighter;
+    .button-variant(@theme-primary;@btn-bg;@white;@theme-primary);
     color: @theme-primary;
   }
 }
