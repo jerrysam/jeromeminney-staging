@@ -36,9 +36,9 @@ window.onkeydown = function(e) {
 document.body.onkeyup = function(e) {
   if( e.keyCode == 32 && rendering == false) {
     addHit();
-    if ( i <= strings.length) {
+    if ( i+1 < strings.length) {
       renderStories();
-    } else if (i > strings.length) {
+    } else if (i+1 == strings.length) {
       leaveWorld();
     }
   }
