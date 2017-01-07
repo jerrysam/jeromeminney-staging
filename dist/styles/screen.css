@@ -497,13 +497,19 @@ body {
 }
 #hero1 {
   height: 100%;
+  max-height: 1000px;
   position: relative;
   color: rgba(0, 0, 0, 0.6);
 }
+#hero1 .container {
+  max-height: 1000px;
+}
 #hero1 .header-content {
-  padding: 30vh 0%;
+  top: 30%;
   width: 70%;
   text-align: left;
+  position: absolute;
+  margin-left: 15%;
 }
 #hero1 .header-content .jmsubtitle {
   font-size: 22px;
@@ -684,7 +690,7 @@ body {
   }
 }
 #testimonials .indicators {
-  padding: 50px;
+  padding: 30px;
   clear: both;
   font-style: italic;
 }
