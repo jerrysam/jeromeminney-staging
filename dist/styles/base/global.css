@@ -5,6 +5,7 @@ body {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  webkit-tap-highlight-color: #222222;
 }
 body p {
   font-size: 18px;
@@ -82,7 +83,7 @@ footer {
 }
 @media only screen and (max-width: 800px) {
   .row {
-    width: 80%;
+    width: 90%;
   }
 }
 .bg-primary {
@@ -91,31 +92,6 @@ footer {
 .bg-offwhite {
   background-color: #FAFBFF;
   color: white;
-}
-::-moz-selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
-}
-::selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
-}
-img::selection {
-  color: white;
-  background: transparent;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
-}
-body {
-  webkit-tap-highlight-color: #222222;
 }
 .btn {
   color: black;
@@ -139,4 +115,26 @@ body {
 }
 .btn :focus {
   outline: 0;
+}
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+img::selection {
+  color: white;
+  background: transparent;
+}
+img::-moz-selection {
+  color: white;
+  background: transparent;
 }

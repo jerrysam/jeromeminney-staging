@@ -360,6 +360,7 @@ body {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  webkit-tap-highlight-color: #222222;
 }
 body p {
   font-size: 18px;
@@ -437,7 +438,7 @@ footer {
 }
 @media only screen and (max-width: 800px) {
   .row {
-    width: 80%;
+    width: 90%;
   }
 }
 .bg-primary {
@@ -446,31 +447,6 @@ footer {
 .bg-offwhite {
   background-color: #FAFBFF;
   color: white;
-}
-::-moz-selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
-}
-::selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
-}
-img::selection {
-  color: white;
-  background: transparent;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
-}
-body {
-  webkit-tap-highlight-color: #222222;
 }
 .btn {
   color: black;
@@ -494,6 +470,28 @@ body {
 }
 .btn :focus {
   outline: 0;
+}
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+img::selection {
+  color: white;
+  background: transparent;
+}
+img::-moz-selection {
+  color: white;
+  background: transparent;
 }
 #hero1 {
   height: 100%;
@@ -656,7 +654,7 @@ body {
 }
 #testimonials .testimonial_container {
   float: left;
-  width: calc(100% - 150px - 30px);
+  width: calc(100% - 200px - 30px);
   text-align: left;
   margin-left: 30px;
 }
@@ -668,8 +666,8 @@ body {
   float: right;
 }
 #testimonials img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   opacity: 0.9;
   float: left;
@@ -680,6 +678,8 @@ body {
   #testimonials .testimonial_container,
   #testimonials .testim-right .testimonial_container,
   #testimonials .testim-right img {
+    width: calc(300px);
+    height: calc(300px);
     margin: 10px auto;
     clear: both;
     float: none;

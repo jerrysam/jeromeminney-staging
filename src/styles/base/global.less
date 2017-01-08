@@ -16,6 +16,7 @@ body {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    webkit-tap-highlight-color: @gray-darker;
     p {
         font-size: 18px;
         line-height: 30px;
@@ -102,12 +103,9 @@ section, footer {
   width:60%;
   margin: auto;
   @media only screen and (max-width: @tabsize) {
-    width: 80%;
+    width: 90%;
   }
 }
-// .no-padding {
-//     padding: 0;
-// }
 
 .bg-primary {
     background-color: @theme-primary;
@@ -119,8 +117,20 @@ section, footer {
 }
 
 
+// Buttons
+.btn {
+    .button-variant(@black;@btn-bg;@theme-accent;@white);
+    border-radius:100px;
+    text-transform: uppercase;
+    margin: 30px;
+    padding:10px 30px;
+    font-weight: 700;
+    min-width: 200px;
+    :focus {
+      outline: 0;
+    }
+}
 
-// Extras
 // -- Highlight Color Customization
 ::-moz-selection {
     color: white;
@@ -142,23 +152,4 @@ img::selection {
 img::-moz-selection {
     color: white;
     background: transparent;
-}
-
-body {
-    webkit-tap-highlight-color: @gray-darker;
-}
-
-
-// Buttons
-.btn {
-    .button-variant(@black;@btn-bg;@theme-accent;@white);
-    border-radius:100px;
-    text-transform: uppercase;
-    margin: 30px;
-    padding:10px 30px;
-    font-weight: 700;
-    min-width: 200px;
-    :focus {
-      outline: 0;
-    }
 }

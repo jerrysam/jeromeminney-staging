@@ -121,6 +121,7 @@
   background-color: white;
 }
 
+// "Define" quote section
 #define {
   background-color: @theme-primary;
   .quotes {
@@ -131,6 +132,7 @@
   }
 }
 
+// "I get my hands dirty (my experience) section"
 #experience {
   background-color: @theme-offwhite;
   .bold {
@@ -138,6 +140,7 @@
   }
 }
 
+// Amsterdam image divider section
 #dam_image {
   background-image: url(../images/dam_image.jpg);
   .background-cover;
@@ -145,9 +148,10 @@
   background-position: center top;
 }
 
+// Testimonials section
 #testimonials {
   //min-height: 1000px; // JMEDIT: This is temporary - delete this please
-  @tesim_img_width:  150px;
+  @tesim_img_width:  200px;
   .rows {
     padding-top: 30px;
     clear: both;
@@ -188,6 +192,8 @@
   }
   @media only screen and (max-width: @tabsize) {
     img, .testimonial_container, .testim-right .testimonial_container, .testim-right img {
+      width: calc(1.5 * @tesim_img_width);
+      height: calc(1.5 * @tesim_img_width);
       margin: 10px auto;
       clear: both;
       float: none;
@@ -204,6 +210,7 @@
   }
 }
 
+// Footer
 #footer {
   background-color: @theme-primary;
   h4, p {
