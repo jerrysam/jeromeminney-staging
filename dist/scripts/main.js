@@ -106,7 +106,7 @@ var leaveWorld = function () {
 
 // Breathe in for 5 seconds, before releasing the air and continuing to press space.
 
-$(document).on('click', 'a', function(event){
+$(document).on('click', '#chevron a', function(event){
     event.preventDefault();
 
     $('html, body').animate({
