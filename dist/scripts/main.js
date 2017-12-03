@@ -37,7 +37,8 @@ var i = 0;
 var rendering = false;
 var spacecounter = 0;
 var hitElement = document.querySelector( '.storyline' );
-var isVisible = hitElement.currentStyle ? hitElement.currentStyle.display : getComputedStyle(hitElement, null).display == "block";
+var test = document.getElementById('storyline');
+var isVisible = test.currentStyle ? test.currentStyle.display : getComputedStyle(test, null).display == "block";
 
 
 // Prevent spacebar from scrolling down the page using this SO solution: http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
