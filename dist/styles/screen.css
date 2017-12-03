@@ -433,7 +433,8 @@ footer {
   clear: both;
 }
 .row {
-  width: 60%;
+  width: 70%;
+  max-width: 800px;
   margin: auto;
 }
 @media only screen and (max-width: 800px) {
@@ -616,11 +617,23 @@ img::-moz-selection {
 #define {
   background-color: #363B4C;
 }
+#define .row {
+  width: 100%;
+}
 #define .quotes {
   color: #C76368;
 }
-#define span {
+#define #emphasis {
   color: #FFF;
+}
+#define #inline-block {
+  display: inline-block;
+}
+@media only screen and (max-width: 800px) {
+  #define .quotes {
+    max-width: 500px;
+    margin: auto;
+  }
 }
 #experience {
   background-color: #FAFBFF;
@@ -678,14 +691,15 @@ img::-moz-selection {
   #testimonials .testimonial_container,
   #testimonials .testim-right .testimonial_container,
   #testimonials .testim-right img {
-    width: calc(300px);
-    height: calc(300px);
+    width: calc(200px);
+    height: calc(200px);
     margin: 10px auto;
     clear: both;
     float: none;
     text-align: center;
   }
-  #testimonials .testimonial_container {
+  #testimonials .testimonial_container,
+  #testimonials .testim-right .testimonial_container {
     width: 100%;
   }
 }

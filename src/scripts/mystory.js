@@ -1,26 +1,40 @@
 var strings = [
-  "Breathe in for 5 seconds before pressing (space) again..",
-  "let's reflect on your recent work",
-  "think back and smile about your recent achievements",
-  "hmm, let's look at work from a fresh perspective..",
-  "perhaps you'd like a bit more time for new things",
-  "Do you really need to do all the work you currently do?",
-  "Imagine your creativity if you had more time",
-  "(or scroll down instead). Press space when your imagination stops..",
-  "there's an opportunity for you to grow here, isn't there?",
-  "I really enjoy mentoring people to achieve",
-  "I'm a people person, who knows how to leverage technology",
-  "(Indeed, I designed and developed this website myself)",
-  "anyway... I think we should connect",
-  "there's a lot for us to achieve",
-  "and not much time left to achieve it",
-  "you can arrange a skype if you scroll down a bit :)",
-  "thanks for the chat, see you soon."
+  "Keep tappin' that spacebar!",
+  "In 2012",
+  "When had my first startup idea",
+  "Something that many people valued,",
+  "and scaled seamlessly on Facebook",
+  "I set out to build an MVP",
+  "But I didn't know how to code..",
+  "|",
+  "I was stuck for 6 months",
+  "All I got was a £10k quote and a useless \"cto\"",
+  "And then I met San (my first cofounder)",
+  "Who offered to build it with me",
+  "in half a day. (We did it!)",
+  "|",
+  "Since then, since 2012",
+  "I've been helping people",
+  "take the next step in their business.",
+  "Simultaneously delivering tangible work",
+  "Whilst teaching people to fish for themselves",
+  "|",
+  "Through starting an agency, a funded startup, and freelance,",
+  "I've helped about a hundred people",
+  "take the next step into leveraging software",
+  "And I would love to help you on this journey.",
+  "|",
+  "I believe there's something to learn from everyone,",
+  "includign you. So don't be shy",
+  "You can book me on calendly, or drop me an email",
+  "Let's do a discovery call :)"
 ];
 var i = 0;
 var rendering = false;
 var spacecounter = 0;
 var hitElement = document.querySelector( '.storyline' );
+var isVisible = hitElement.currentStyle ? hitElement.currentStyle.display : getComputedStyle(hitElement, null).display == "block";
+
 
 // Prevent spacebar from scrolling down the page using this SO solution: http://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
 window.onkeydown = function(e) {
@@ -30,11 +44,12 @@ window.onkeydown = function(e) {
   }
 
 document.body.onkeyup = function(e) {
-  if( e.keyCode == 32 && rendering == false) {
+  var isStoryActive = isVisible && !rendering;
+  if( e.keyCode == 32 && isStoryActive) {
     addHit();
-    if ( i+1 < strings.length) {
-      renderStories();
-    } else if (i+1 == strings.length) {
+    if ( i-1 < strings.length) {
+      renderStories();  
+    } else if (i-1 == strings.length) {
       leaveWorld();
     }
   }
@@ -62,7 +77,7 @@ var enterWorld = function() {
 }
 
 var addLine = function() {
-  pxY = pxY - 40;
+  pxY = pxY - 42;
   $(".newline").css("transform", "translateY(" + pxY + "px)");
   rendering = true;
   setTimeout(function() {

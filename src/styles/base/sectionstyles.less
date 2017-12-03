@@ -124,11 +124,23 @@
 // "Define" quote section
 #define {
   background-color: @theme-primary;
-  .quotes {
-  color: @theme-accent;
+  .row {
+    width: 100%;
   }
-  span {
+  .quotes {
+    color: @theme-accent;
+  }
+  #emphasis {
     color: @white;
+  }
+  #inline-block {
+    display: inline-block;
+  }
+  @media only screen and (max-width: @tabsize) {
+    .quotes {
+      max-width: 500px;
+      margin: auto;
+    }
   }
 }
 
@@ -192,14 +204,15 @@
   }
   @media only screen and (max-width: @tabsize) {
     img, .testimonial_container, .testim-right .testimonial_container, .testim-right img {
-      width: calc(1.5 * @tesim_img_width);
-      height: calc(1.5 * @tesim_img_width);
+      width: calc(1 * @tesim_img_width);
+      height: calc(1 * @tesim_img_width);
       margin: 10px auto;
       clear: both;
       float: none;
       text-align: center;
     }
-    .testimonial_container {
+    .testimonial_container,
+    .testim-right .testimonial_container {
       width:100%;
     }
   }
