@@ -10,26 +10,24 @@ var minifycss = require('gulp-minify-css');
 var less = require('gulp-less');
 var browserSync = require('browser-sync');
 
-gulp.task('browser-sync', function() {
+//BrowserSync Reload function (redundant?)
+gulp.task('browser-sync', gulp.series(function() {
   browserSync({
     server: {
        baseDir: "./"
     }
   });
-});
+}));
 
-// Due to my change at the bottom I think this below function is now redundant And perhaps the one above
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-});
-
-gulp.task('images', function(){
+// Pipe all Images
+gulp.task('images', gulp.series(function(){
   gulp.src('src/images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/images/'));
-});
+}));
 
-gulp.task('styles', function(){
+// Pipe all CSS
+gulp.task('styles', gulp.series(function() {
   gulp.src(['src/styles/**/*.less'])
     .pipe(plumber({
       errorHandler: function (error) {
@@ -43,9 +41,10 @@ gulp.task('styles', function(){
     .pipe(minifycss())
     .pipe(gulp.dest('dist/styles/'))
     .pipe(browserSync.reload({stream:true}))
-});
+}));
 
-gulp.task('scripts', function(){
+// Pipe all JS
+gulp.task('scripts', gulp.series(function(){
   return gulp.src('src/scripts/**/*.js')
     .pipe(plumber({
       errorHandler: function (error) {
@@ -58,10 +57,11 @@ gulp.task('scripts', function(){
     .pipe(uglify())
     .pipe(gulp.dest('dist/scripts/'))
     .pipe(browserSync.reload({stream:true}))
-});
+}));
 
-gulp.task('default', ['browser-sync'], function(){
+// Main gulp task - triggers BrowserSync, and watches for changes in Less, JS, and HTML
+gulp.task('default', gulp.series('browser-sync', function(){
   gulp.watch("src/styles/**/*.less", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
   gulp.watch('*.html', browserSync.reload); // Had to change this line from something else to make it reload
-});
+}));
